@@ -1,0 +1,230 @@
+/* Dark Theme Styles */
+body {
+    background-color: #121212;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container & Header */
+.container {
+    max-width: 1200px;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+
+.trending-header {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 0.5rem;
+}
+
+.trending-header h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #ffffff;
+}
+
+.trending-header:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #3bb77e, #8bc34a);
+    border-radius: 2px;
+}
+
+.btn-outline-success {
+    border-color: #3bb77e;
+    color: #3bb77e;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background: #3bb77e;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Recipe Cards - 2 per line */
+.row.g-4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.recipe-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: #1e1e1e;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    background: #252525;
+}
+
+.recipe-img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease;
+    filter: brightness(0.9);
+}
+
+.recipe-card:hover .recipe-img {
+    transform: scale(1.03);
+    filter: brightness(1);
+}
+
+/* Badges */
+.badge {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+}
+
+.bg-success {
+    background-color: #3bb77e !important;
+}
+
+.bg-danger {
+    background-color: #ff6b6b !important;
+}
+
+.badge-difficulty {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+    color: #121212 !important;
+}
+
+.bg-danger.text-white {
+    background-color: #f44336 !important;
+}
+
+/* Card Content */
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0.5rem 0 1rem;
+    color: #ffffff;
+}
+
+.card-text {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.text-muted {
+    color: #888 !important;
+    font-size: 0.85rem;
+}
+
+/* Recipe Meta */
+.d-flex.justify-content-between {
+    margin-bottom: 0.75rem;
+}
+
+.text-success {
+    color: #3bb77e !important;
+    font-weight: 600;
+}
+.btn-success {
+    background-color: #3bb77e;
+    border-color: #3bb77e;
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+    min-width: 120px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-success:hover {
+    background-color: #2fa369;
+    border-color: #2fa369;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 183, 126, 0.3);
+}
+
+/* Center alignment for the button container */
+.text-center {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Favorite Button */
+.btn-outline-danger {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+.fa-heart {
+    transition: all 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .row.g-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .trending-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .recipe-img {
+        height: 180px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.col-md-6 {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.col-md-6:nth-child(1) { animation-delay: 0.1s; }
+.col-md-6:nth-child(2) { animation-delay: 0.2s; }
